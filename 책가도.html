@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="책가도.css" />
+  <script src="호작도.js"></script>
+
+  <body>
+    <main class="배경">
+      <div class="상단바"></div>
+      <div class="설정" onclick="toggleBtn4()"></div>
+      <!--메인들-->
+      <div class="채팅창">
+        <div id="말풍선">
+          현재 온라인인 작품은 호작도, 책가도, 화조도, 십장생도,
+          어변성룡도입니다. 대화를 엿보고 싶은 작품을 클릭해보세요!
+        </div>
+        <div id="말풍선_채팅창"></div>
+      </div>
+      <div class="로고창">
+        <div class="꾸밈1"></div>
+        <div class="꾸밈2"></div>
+        <div class="로고바탕"></div>
+      </div>
+      <div class="클릭이전화면">
+        <img id="메인호작도" src="3d.png" alt="책가도" />
+      </div>
+      <div class="오른쪽사진">
+        <img id="어변성룡도" src="3d 어변성룡도-2.png" alt="어변성룡도" />
+      </div>
+
+      <!--이건 버튼-->
+      <button id="버튼_3d" type="button" onclick="toggleBtn1()">Hozakdo</button>
+      <button id="버튼_설명" type="button" onclick="toggleBtn2()">
+        Explanation
+      </button>
+      <button id="버튼_채팅" type="button" onclick="toggleBtn3()">Chat</button>
+
+      <!--여기서부터는 클릭하면 뜨는 거-->
+      <div class="사진" id="사진위에바"></div>
+      <div
+        class="사진"
+        id="사진"
+        onmousedown="startDragging(event)"
+        onmousemove="dragging(event)"
+        onmouseup="stopDragging(event)"
+      >
+        <img id="호작도3d" src="3d.png" alt="책가도" class="draggable" />
+      </div>
+      <div class="설명" id="프사창">
+        <div class="설명" id="프사원">
+          <img id="호작도" src="책가도 프사.png" alt="책가도 프사" />
+        </div>
+      </div>
+      <div class="설명" id="설명">책가도에 대한 설명을 적어용</div>
+      <div class="카톡창">
+        <li id="말풍선1">울랄라</li>
+        <li id="말풍선2">우루룻 까꿍</li>
+        <li id="말풍선3">우루룩롹끼</li>
+        <div id="카톡쓰는창" contenteditable="true"></div>
+      </div>
+      <button
+        class="버튼"
+        id="카톡"
+        type="button"
+        onclick="location.href='민드바이스 카톡창.html'"
+      >
+        ✉️
+      </button>
+      <button
+        class="버튼"
+        id="홈"
+        type="button"
+        onclick="location.href='민드바이스메인.html'"
+      >
+        🏠
+      </button>
+    </main>
+  </body>
+</html>

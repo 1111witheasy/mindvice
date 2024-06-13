@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="korean">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min-dvice</title>
+  </head>
+  <link rel="stylesheet" href="민드바이스 카톡창.css" />
+  <body>
+    <main class="배경">
+      <div class="상단바"></div>
+      <div class="설정"></div>
+      <div class="설명">
+        <div id="말풍선">
+          현재 온라인인 작품은 호작도, 책가도, 화조도, 십장생도,
+          어변성룡도입니다. 대화를 엿보고 싶은 작품을 클릭해보세요!
+        </div>
+        <div id="채팅창"></div>
+      </div>
+      <div class="로고창">
+        <div class="꾸밈1"></div>
+        <div class="꾸밈2"></div>
+        <div class="로고바탕"></div>
+      </div>
+      <button
+        class="홈"
+        type="button"
+        onclick="location.href='민드바이스메인.html'"
+      >
+        🏠
+      </button>
+      <button class="부적" type="button">🔮</button>
+      <div id="부적 메세지 수"></div>
+      <div class="리스트">
+        <ul>
+          <li onclick="location.href='호작도.html'">Hozakdo</li>
+          <li onclick="location.href='책가도.html'">Chaekgado</li>
+          <li onclick="location.href='화조도.html'">Hwazodo</li>
+          <li onclick="location.href='십장생도.html'">Sipjangsaengdo</li>
+          <li onclick="location.href='어변성룡도.html'">Eobyeonseongnyongdo</li>
+        </ul>
+      </div>
+      <div class="사진">
+        <img id="어변성룡도" src="3d 어변성룡도-2.png" alt="어변성룡도" />
+      </div>
+    </main>
+  </body>
+</html>
