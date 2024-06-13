@@ -1,3 +1,3 @@
-<div onclick="location.href='민드바이스부적.html'">
+<div onclick="location.href='민드바이스로딩.html'">
   MIN-DVICE
 </div>
