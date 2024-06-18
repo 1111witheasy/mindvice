@@ -1,6 +1,8 @@
+body,
 html {
+  margin: 0;
+  padding: 0;
   background-color: #050016;
-  overflow-x: hidden;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -27,8 +29,8 @@ html {
 .설명 {
   background-color: #f3f3ff;
   width: 300px;
-  height: 380px;
-  border: 1px solid #050016;
+  height: 410px;
+  border: 1px solid #33f;
   border-radius: 20px;
   position: absolute;
   left: 0;
@@ -41,74 +43,135 @@ html {
   hyphens: auto;
 }
 
+/*
+
 .스크롤 {
   background-color: #f3f3ff;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 20px;
   position: absolute;
   top: 120px;
   left: 330px;
-  width: 900px; /* container의 너비를 900px로 제한 */
-  height: 500px; /* container의 높이를 500px로 제한 */
-  overflow: auto; /* 스크롤 유지 */
-  margin: 0 auto; /* 가운데 정렬 */
+  width: 900px; 
+  height: 500px; 
+  overflow: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.스크롤::-webkit-scrollbar {
+  display: none;
 }
 
 #짱긴거 {
   height: 2000px;
   top: 0px;
 }
+*/
 
-#중앙원 {
+/*
+ {
   display: flex;
   background-color: #050016;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  position: absolute;
+  position: sticky;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .image-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: sticky;
   transform: translate(-50%, -50%); /* 초기 회전 각도 설정 */
+
+.container {
+  position: absolute;
+  border-radius: 20px;
+  top: 120px;
+  left: 330px;
+  width: 900px;
+  height: 500px;
+  overflow-y: scroll; /* 세로 스크롤만 가능하도록 설정 */
+  max-height: 2000px; /* 최대 스크롤 높이 설정 */
+  background-color: #f3f3ff;
+  border: 1px solid #3333ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* scroll-snap-type: y mandatory;*/
 }
 
-.일러프사 {
-  width: 50px;
-  height: 50px;
+#UU {
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+#circle {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  border-radius: 50%;
+  position: sticky;
+  top: 300px; /* 고정될 위치 */
+  left: calc(50% - 150px); /* 가운데 정렬 */
+}
+
+.illustps {
   position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  scroll-snap-align: center;
+}
+
+.illustps.active {
+  opacity: 1;
+}
+
+/*
+. {
+  width: 100px;
+  height: 100px;
+  position: relative;
   top: 50%;
   left: 50%;
-  transform-origin: center 250px; /* 회전 축을 아래쪽 중앙으로 설정 */
+  transform-origin: center 250px;
   opacity: 0.5;
-
-  transition: opacity 0.5s ease-in-out; /* 투명도 변경을 부드럽게 */
+  transition: opacity 0.5s ease-in-out; 
 }
 
-.화조도프사 {
-  transform: rotate(0deg) translate(-100px) rotate(0deg);
+
+#화조도프사 {
+  transform: rotate(0deg);
+  position: absolute;
 }
 
-.호작도프사 {
-  transform: rotate(72deg) translate(-100px) rotate(-72deg);
+#호작도프사 {
+  transform: rotate(72deg);
+  position: absolute;
 }
 
-.십장생도프사 {
-  transform: rotate(144deg) translate(-100px) rotate(-144deg);
+#십장생도프사 {
+  transform: rotate(144deg);
+  position: absolute;
 }
 
-.어변성룡도프사 {
-  transform: rotate(216deg) translate(-100px) rotate(-216deg);
+#어변성룡도프사 {
+  transform: rotate(216deg);
+  position: absolute;
 }
 
-.책가도 {
-  transform: rotate(288deg) translate(-100px) rotate(-288deg);
+#책가도프사 {
+  transform: rotate(288deg);
+  position: absolute;
 }
+    */
 
 .일러 {
   width: 300px;
@@ -117,19 +180,20 @@ html {
 
 .버튼 {
   background-color: #f3f3ff;
-  width: 300px;
+  width: 330px;
   height: 60px;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 20px;
   position: absolute;
   left: 0px;
-  top: 530px;
+  top: 560px;
   color: #3333ff;
   text-align: right;
   padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
   line-height: -30px;
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;
@@ -157,24 +221,47 @@ html {
   background-color: #f3f3ff;
   width: 50px;
   height: 50px;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 25px 25px 0px 0px;
   position: absolute;
   font-size: 1.2rem;
   top: 490px;
   left: 20px;
   z-index: 2;
+  animation-name: button2;
+  animation-duration: 0.7s;
+  animation-duration: ease-in;
+  animation-direction: forward;
 }
 
-.부적 {
+#부적 {
   background-color: #f3f3ff;
   width: 50px;
   height: 50px;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 25px 25px 0px 0px;
   position: absolute;
   font-size: 1.2rem;
-  top: 490px;
-  left: 60px;
+  top: 520px;
+  left: 70px;
   z-index: 2;
+  animation-name: button2;
+  animation-duration: 0.7s;
+  animation-duration: ease-in;
+  animation-direction: forward;
+}
+
+@-webkit-keyframes button2 {
+  0% {
+    top: 570px;
+    opacity: 0%;
+  }
+  100% {
+    top: 520px;
+    opacity: 100%;
+  }
+}
+
+#부적:hover {
+  background-color: #33f;
 }

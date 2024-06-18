@@ -6,6 +6,7 @@
     <title>Min-dvice</title>
   </head>
   <link rel="stylesheet" href="민드바이스메인.css" />
+  <script src="민드바이스메인.js"></script>
   <body>
     <main class="배경">
       <div class="상단바">
@@ -34,64 +35,84 @@
         </p>
       </div>
       <div id="container-wrapper">
-        <div class="스크롤">
-          <div id="중앙원"></div>
-          <div class="image-wrapper">
-            <img
-              class="일러"
-              id="3d 십장생도"
-              src="3d 십장생도.png"
-              alt="십장생도"
-            />
-            <img
-              class="일러프사"
-              id="십장생도프사"
-              src="십장생도 프사.png"
-              alt="십장생도"
-            />
-            <img
-              class="일러"
-              id="3d 어변성룡도"
-              src="3d 어변성룡도-2.png"
-              alt="어변성룡도"
-            />
-            <img
-              class="일러프사"
-              id="어변성룡도프사"
-              src="어변성룡도 프사.png"
-              alt="어변성룡도"
-            />
-            <img class="일러" id="3d 책가도" src="3d.png" alt="책가도" />
-            <img
-              class="일러프사"
-              id="책가도프사"
-              src="책가도 프사.png"
-              alt="책가도"
-            />
-            <img class="일러" id="3d 호작도" src="3d 호작도.png" alt="호작도" />
-            <img
-              class="일러프사"
-              id="호작도프사"
-              src="프사 호작도.png"
-              alt="호작도"
-            />
-            <img class="일러" id="3d 화조도" src="3d 화조도.png" alt="화조도" />
-            <img
-              class="일러프사"
-              id="화조도프사"
-              src="화조도 프사.png"
-              alt="화조도"
-            />
+        <div class="container">
+          <div id="circle">
+            <div id="photos">
+              <img
+                class="일러"
+                id="3d 십장생도"
+                src="3d 십장생도.png"
+                alt="십장생도"
+                onclick="location.href='십장생도.html'"
+              />
+              <img
+                class="illustps"
+                id="십장생도프사"
+                src="십장생도 프사.png"
+                alt="십장생도"
+              />
+              <img
+                class="일러"
+                id="3d 어변성룡도"
+                src="3d 어변성룡도-2.png"
+                alt="어변성룡도"
+                onclick="location.href='어변성룡도.html'"
+              />
+              <img
+                class="illustps"
+                id="어변성룡도프사"
+                src="어변성룡도 프사.png"
+                alt="어변성룡도"
+              />
+              <img
+                class="일러"
+                id="3d 책가도"
+                src="3d.png"
+                alt="책가도"
+                onclick="location.href='책가도.html'"
+              />
+              <img
+                class="illustps"
+                id="책가도프사"
+                src="책가도 프사.png"
+                alt="책가도"
+              />
+              <img
+                class="일러"
+                id="3d 호작도"
+                src="3d 호작도.png"
+                alt="호작도"
+                onclick="location.href='책가도.html'"
+              />
+              <img
+                class="illustps"
+                id="호작도프사"
+                src="프사 호작도.png"
+                alt="호작도"
+              />
+              <img
+                class="일러"
+                id="3d 화조도"
+                src="3d 화조도.png"
+                alt="화조도"
+                onclick="location.href='책가도.html'"
+              />
+              <img
+                class="illustps"
+                id="화조도프사"
+                src="화조도 프사.png"
+                alt="화조도"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="버튼">
-        <div id="메세지수">
-          <p>6</p>
-        </div>
+      <button class="버튼" type="button" onclick="toggleBtn1()">
+        <p id="메세지수">1</p>
+
         New message!
-      </div>
+      </button>
       <button
         class="카톡"
         type="button"
@@ -99,15 +120,13 @@
       >
         ✉️
       </button>
-      <div id="카톡 메세지 수"></div>
       <button
-        class="부적"
+        id="부적"
         type="button"
         onclick="location.href='민드바이스부적.html'"
       >
         🔮
       </button>
-      <div id="부적 메세지 수"></div>
     </main>
   </body>
 </html>
