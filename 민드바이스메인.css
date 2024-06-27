@@ -43,49 +43,6 @@ html {
   hyphens: auto;
 }
 
-/*
-
-.스크롤 {
-  background-color: #f3f3ff;
-  border: 1px solid #33f;
-  border-radius: 20px;
-  position: absolute;
-  top: 120px;
-  left: 330px;
-  width: 900px; 
-  height: 500px; 
-  overflow: auto; 
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
-}
-
-.스크롤::-webkit-scrollbar {
-  display: none;
-}
-
-#짱긴거 {
-  height: 2000px;
-  top: 0px;
-}
-*/
-
-/*
- {
-  display: flex;
-  background-color: #050016;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  position: sticky;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.image-wrapper {
-  position: sticky;
-  transform: translate(-50%, -50%); /* 초기 회전 각도 설정 */
-
 .container {
   position: absolute;
   border-radius: 20px;
@@ -93,48 +50,249 @@ html {
   left: 330px;
   width: 900px;
   height: 500px;
-  overflow-y: scroll; /* 세로 스크롤만 가능하도록 설정 */
-  max-height: 2000px; /* 최대 스크롤 높이 설정 */
+  overflow: hidden;
   background-color: #f3f3ff;
   border: 1px solid #3333ff;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* scroll-snap-type: y mandatory;*/
-}
-
-#UU {
 }
 
 .container::-webkit-scrollbar {
   display: none;
 }
+/*
+#UU {
+  height: 2000px;
+}
+
 
 #circle {
   width: 300px;
   height: 300px;
-  background-color: black;
+  background-color: #050016;
   border-radius: 50%;
   position: sticky;
-  top: 300px; /* 고정될 위치 */
-  left: calc(50% - 150px); /* 가운데 정렬 */
+  top: 100px;
+  left: calc(50% - 150px);
+}
+*/
+
+.top {
+  list-style: none;
+  margin: 2px 0;
+  text-align: center;
+  position: absolute;
+  top: 25px;
+  left: calc(50% - 200px);
+}
+.toplist {
+  display: inline-block;
+  width: 100px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-weight: 600;
+  color: #050016;
+}
+
+.toplist:hover {
+  color: #3333ff;
+}
+
+li {
+  list-style: none;
+}
+
+#uu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.mainlist {
+  width: 900px;
+  height: 4500px;
+  top: 0px;
+  position: absolute;
+}
+.mainlist::after {
+  clear: both;
+}
+
+.list {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  display: flex;
 }
 
 .illustps {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 0px;
-  left: 0px;
+  width: 250px;
+  height: 250px;
+  background-color: #050016;
   border-radius: 50%;
   scroll-snap-align: center;
+  overflow: hidden;
+  top: 110px;
+  left: calc(50% - 150px);
+  filter: drop-shadow(<0> <0> [15px] [#e1e1eb]);
+  animation-name: upsidedown;
+  animation-duration: 3s;
+  animation-duration: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
+/* 키프레임 이름 = 애니메이션 이름 */
+@-webkit-keyframes upsidedown {
+  0% {
+    top: 90px;
+  }
+  100% {
+    top: 110px;
+  }
+}
+
+.illust-cover {
+  position: absolute;
+  overflow: hidden;
+  width: 50px;
+  height: 100px;
+  background-color: #050016;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  top: 25px;
+  left: 800px;
+}
+.illust {
+  width: 150%;
+  animation-name: skew;
+  animation-duration: 5s;
+  animation-duration: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes skew {
+  from {
+    transform: skew(20deg);
+  }
+  to {
+    transform: skew(0deg);
+  }
+}
+
+.illust-cover2 {
+  position: absolute;
+  overflow: hidden;
+  width: 50px;
+  height: 100px;
+  background-color: #050016;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  top: 25px;
+  left: 0px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.title {
+  position: absolute;
+  top: 380px;
+  font-size: 30px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+}
+
+.point1 {
+  position: absolute;
+  top: 350px;
+  line-height: 1.5;
+  font-size: 20px;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-weight: 600;
+}
+
+.paragraph {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  top: 380px;
+  font-size: 12px;
+  left: 650px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+}
+
+.btn-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 400px;
+}
+
+.btn-container button {
+  border-radius: 500px;
+  width: 30px;
+  height: 10px;
+  border: 1px hidden;
+  background-color: #f3f3ff;
+  border: 1px solid #3333ff;
+  padding: 5px;
+  margin: 5px;
+  z-index: 1000;
+}
+
+.btn-container button:focus {
+  background-color: #050016;
+}
+
+/*
+
+.list {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  transform: (100, 0);
+}
+
+.ps {
+  padding-right: 200px;
+  list-style: none;
+  user-select: none;
+}
+
+.ps:first {
+  padding-left: 100px;
+}
+
+.illustps {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  -webkit-user-drag: none;
+}
+
+/*
 .illustps.active {
   opacity: 1;
 }
 
-/*
+
 . {
   width: 100px;
   height: 100px;
@@ -146,37 +304,7 @@ html {
   transition: opacity 0.5s ease-in-out; 
 }
 
-
-#화조도프사 {
-  transform: rotate(0deg);
-  position: absolute;
-}
-
-#호작도프사 {
-  transform: rotate(72deg);
-  position: absolute;
-}
-
-#십장생도프사 {
-  transform: rotate(144deg);
-  position: absolute;
-}
-
-#어변성룡도프사 {
-  transform: rotate(216deg);
-  position: absolute;
-}
-
-#책가도프사 {
-  transform: rotate(288deg);
-  position: absolute;
-}
-    */
-
-.일러 {
-  width: 300px;
-  display: none;
-}
+  */
 
 .버튼 {
   background-color: #f3f3ff;
@@ -227,6 +355,7 @@ html {
   font-size: 1.2rem;
   top: 490px;
   left: 20px;
+  display: none;
   z-index: 2;
   animation-name: button2;
   animation-duration: 0.7s;
@@ -234,7 +363,7 @@ html {
   animation-direction: forward;
 }
 
-#부적 {
+#vj {
   background-color: #f3f3ff;
   width: 50px;
   height: 50px;
@@ -243,8 +372,9 @@ html {
   position: absolute;
   font-size: 1.2rem;
   top: 520px;
-  left: 70px;
+  left: 15px;
   z-index: 2;
+  display: none;
   animation-name: button2;
   animation-duration: 0.7s;
   animation-duration: ease-in;
@@ -262,6 +392,6 @@ html {
   }
 }
 
-#부적:hover {
+#vj:hover {
   background-color: #33f;
 }

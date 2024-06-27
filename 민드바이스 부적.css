@@ -16,7 +16,7 @@ html {
   width: 1160px;
   height: 40px;
   background-color: #f3f3ff;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 20px;
   position: absolute;
   top: 0px;
@@ -28,71 +28,468 @@ html {
   height: 40px;
   position: absolute;
   background-color: #f3f3ff;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 20px;
   top: 0px;
   left: 1160px;
 }
 
 .왼쪽바 {
-  width: 400px;
+  width: 300px;
   height: 560px;
   position: absolute;
-  background-color: #050016;
-  border: 1px solid #f3f3ff;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #050016, #33f);
+  background-size: 400% 400%;
   border-radius: 20px;
   top: 40px;
   left: 0px;
-}
-
-.중앙 {
-  width: 400px;
-  height: 560px;
-  position: absolute;
-  background-color: #f3f3ff;
-  border: 1px solid #050016;
-  border-radius: 20px;
-  top: 40px;
-  left: 400px;
+  animation: colorChange 6s ease infinite;
 }
 
 img {
   width: 100px;
 }
 
+.wave {
+  opacity: 0.4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  border: 1px solid #050016;
+  width: 500px;
+  height: 500px;
+  -webkit-transform-origin: 50$ 48%;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  -webkit-animation: drift 5s infinite linear;
+  animation: drift 5s infinite linear;
+}
+
+.wave.-three {
+  -webkit-animation: drift 7s infinite linear;
+  animation: drift 7s infinite linear;
+}
+
+.wave.-two {
+  -webkit-animation: drift 10s infinite linear;
+  animation: drift 10s infinite linear;
+  opacity: 0.1;
+  border: 1px solid #33f;
+}
+
+.wave2 {
+  opacity: 0.4;
+  position: absolute;
+  top: -100px;
+  left: -50%;
+  border: 1px solid #050016;
+  width: 500px;
+  height: 500px;
+  -webkit-animation-delay: 3s;
+  -webkit-transform-origin: 50% 48%;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  -webkit-animation: drift 8s infinite linear;
+  animation: drift 8s infinite linear;
+}
+.wave2.-three {
+  -webkit-animation: drift 6s infinite linear;
+  animation: drift 6s infinite linear;
+}
+
+.wave2.-two {
+  -webkit-animation: drift 12s infinite linear;
+  animation: drift 12s infinite linear;
+  opacity: 0.1;
+  border: 1px solid #33f;
+}
+
+@-webkit-keyframes drift {
+  from {
+    -webkit-transform: rotate(0deg) scale(0, 0);
+    transform: rotate(0deg) scale(0, 0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(2, 2);
+    transform: rotate(360deg) scale(2, 2);
+    opacity: 0;
+  }
+}
+
+@keyframes drift {
+  from {
+    -webkit-transform: rotate(0deg) scale(0, 0);
+    transform: rotate(0deg) scale(0, 0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(2, 2);
+    transform: rotate(360deg) scale(2, 2);
+    opacity: 0;
+  }
+}
+
+.wave1 {
+  opacity: 0.4;
+  position: absolute;
+  top: 3%;
+  left: -50%;
+  border: 1px solid #050016;
+  width: 500px;
+  height: 500px;
+  -webkit-transform-origin: 50$ 48%;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  -webkit-animation: drift 4s infinite linear;
+  animation: drift 4s infinite linear;
+}
+.wave1.-three {
+  -webkit-animation: drift 6s infinite linear;
+  animation: drift 6s infinite linear;
+}
+
+.wave1.-two {
+  -webkit-animation: drift 10s infinite linear;
+  animation: drift 10s infinite linear;
+  opacity: 0.1;
+  border: 1px solid #33f;
+}
+
+.wave3 {
+  opacity: 0.4;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  border: 1px solid #050016;
+  width: 500px;
+  height: 500px;
+  -webkit-animation-delay: 3s;
+  -webkit-transform-origin: 50% 48%;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  -webkit-animation: drift 8s infinite linear;
+  animation: drift 8s infinite linear;
+}
+.wave3.-three {
+  -webkit-animation: drift 6s infinite linear;
+  animation: drift 6s infinite linear;
+  border: 1px solid #33f;
+}
+
+.wave3.-two {
+  -webkit-animation: drift 12s infinite linear;
+  animation: drift 12s infinite linear;
+  opacity: 0.1;
+  border: 1px solid #050016;
+}
+
 .오른쪽바 {
-  width: 400px;
+  width: 300px;
+  height: 560px;
+  position: absolute;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #050016, #33f);
+  background-size: 400% 400%;
+  border: 1px solid #33f;
+  border-radius: 20px;
+  top: 40px;
+  left: 900px;
+  animation: colorChange 6s ease infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.중앙 {
+  width: 600px;
   height: 560px;
   position: absolute;
   background-color: #050016;
-  border: 1px solid #f3f3ff;
+  border: 1px solid #33f;
   border-radius: 20px;
   top: 40px;
-  left: 800px;
+  left: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.홈 {
+.Q {
+  color: #f3f3ff;
+  position: absolute;
+  top: 50px;
+}
+
+ul {
+  list-style: none;
+  color: #33f;
+  position: absolute;
+  margin: 40px;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none; /* Disable the normal item numbering */
+  position: relative; /* Create a positioning context */
+  margin: 16px; /* Give each list item a left margin to make room for the numbers */
+  padding: 6px 18px; /* Add some spacing around the content */
+  background: #f3f3ff;
+  border-radius: 20px;
+}
+
+.부적22 {
+  z-index: 10;
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  background-color: #f3f3ff;
+  border: #33f 1px solid;
+  border-radius: 20px;
+  top: 100px;
+  left: 250px;
+  overflow: hidden;
+  display: none;
+}
+
+.중앙원 {
+  width: 300px;
+  height: 300px;
+  background: #050016;
+  border-radius: 50%;
+  position: absolute;
+  top: 250px;
+  left: 200px;
+}
+
+.illust {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 100px;
+  position: absolute;
+  transform-origin: center 250px;
+  opacity: 0;
+}
+
+#화조도 {
+  display: block;
+  transform: rotate(0);
+  animation: rotate1 4s ease-in-out;
+}
+#십장생도 {
+  display: block;
+  transform: rotate(72deg);
+  animation: rotate2 4s ease-in-out;
+}
+#호작도 {
+  display: block;
+  transform: rotate(144deg);
+  animation: rotate3 4s ease-in-out;
+}
+#어변성룡도 {
+  display: block;
+  transform: rotate(216deg);
+  animation: rotate4 4s ease-in-out;
+}
+#책가도 {
+  display: block;
+  transform: rotate(288deg);
+  animation: rotate5 4s ease-in-out;
+}
+
+@-webkit-keyframes rotate1 {
+  0% {
+    -webkit-transform: rotate (0);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate (72deg);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: rotate(792deg);
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes rotate3 {
+  0% {
+    -webkit-transform: rotate (144deg);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: rotate(864deg);
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes rotate4 {
+  0% {
+    -webkit-transform: rotate (216deg);
+    opacity: 100%;
+  }
+
+  100% {
+    -webkit-transform: rotate(936deg);
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes rotate5 {
+  0% {
+    -webkit-transform: rotate (288deg);
+    opacity: 100%;
+  }
+
+  100% {
+    -webkit-transform: rotate(1008deg);
+    opacity: 0%;
+  }
+}
+
+.일러 {
+  z-index: 100;
+  width: 250px;
+  position: absolute;
+  top: 120px;
+  left: 500px;
+}
+
+#화조도3d {
+  animation: 등장 5s ease-in-out;
+  display: none;
+}
+
+#십장생도3d {
+  animation: 등장 5s ease-in-out;
+  display: none;
+}
+
+#호작도3d {
+  animation: 등장 5s ease-in-out;
+  display: none;
+}
+
+#책가도3d {
+  animation: 등장 5s ease-in-out;
+  display: none;
+}
+
+#어변성룡도3d {
+  animation: 등장 5s ease-in-out;
+  display: none;
+}
+
+@-webkit-keyframes 등장 {
+  0% {
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
+    top: 130px;
+  }
+  90% {
+    opacity: 0%;
+    top: 115px;
+  }
+
+  100% {
+    top: 120px;
+    opacity: 100%;
+  }
+}
+
+.버튼 {
+  display: none;
+}
+
+#홈 {
   background-color: #f3f3ff;
   width: 40px;
   height: 40px;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 25px;
   font-size: 1.2rem;
   position: absolute;
   top: 0px;
-  left: 1100px;
+  left: 1080px;
   z-index: 10;
+
+  animation-name: button1;
+  animation-duration: 0.7s;
+  animation-duration: ease-in;
+  animation-direction: forward;
 }
 
-.카톡 {
+/* 키프레임 이름 = 애니메이션 이름 */
+@-webkit-keyframes button1 {
+  0% {
+    left: 1160px;
+    opacity: 0%;
+  }
+  100% {
+    left: 1080px;
+    opacity: 100%;
+  }
+}
+
+#홈:hover {
+  background-color: #33f;
+}
+
+#카톡 {
   background-color: #f3f3ff;
   width: 40px;
   height: 40px;
-  border: 1px solid #050016;
+  border: 1px solid #33f;
   border-radius: 25px;
   font-size: 1.2rem;
   position: absolute;
   top: 0px;
-  left: 1150px;
+  left: 1120px;
   z-index: 10;
+  animation-name: button2;
+  animation-duration: 0.7s;
+  animation-duration: ease-in;
+  animation-direction: forward;
+}
+
+/* 키프레임 이름 = 애니메이션 이름 */
+@-webkit-keyframes button2 {
+  0% {
+    left: 1160px;
+    opacity: 0%;
+  }
+  30% {
+    left: 1160px;
+    opacity: 0%;
+  }
+  100% {
+    left: 1120px;
+    opacity: 100%;
+  }
+}
+
+#카톡:hover {
+  background-color: #33f;
 }

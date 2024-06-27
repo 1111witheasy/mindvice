@@ -6,31 +6,113 @@
     <title>민드바이스부적</title>
   </head>
   <link rel="stylesheet" href="민드바이스 부적.css" />
+  <script src="호작도.js"></script>
   <body>
     <main class="배경">
       <div class="상단바"></div>
-      <div class="설정"></div>
-      <div class="왼쪽바"></div>
-      <div class="중앙">
-        <div class="중앙원"></div>
-        <div class="대사"></div>
-        <img src="십장생도 프사.png" alt="십장생도" />
-        <img src="화조도 프사.png" alt="십장생도" />
-        <img src="프사 호작도.png" alt="십장생도" />
-        <img src="어변성룡도 프사.png" alt="십장생도" />
-        <img src="책가도 프사.png" alt="십장생도" />
+      <div class="설정" onclick="toggleBtn4()"></div>
+      <!--선택지-->
+      <div class="왼쪽바">
+        <div class="wave -one"></div>
+        <div class="wave -two"></div>
+        <div class="wave -three"></div>
+        <div class="wave2 -one"></div>
+        <div class="wave2 -two"></div>
+        <div class="wave2 -three"></div>
       </div>
-      <div class="오른쪽바"></div>
+      <div class="중앙">
+        <p class="Q">어떤 고민을 가지고 계신가요?</p>
+        <ul class="고민리스트">
+          <li class="button" id="1" onclick="toggleBtnevent1()">1</li>
+          <li class="button" id="2" onclick="toggleBtnevent2()">2</li>
+          <li class="button" id="3" onclick="toggleBtnevent3()">3</li>
+          <li class="button" id="4" onclick="toggleBtnevent4()">4</li>
+          <li class="button" id="5" onclick="toggleBtnevent5()">5</li>
+        </ul>
+      </div>
+      <div class="오른쪽바">
+        <div class="wave1 -one"></div>
+        <div class="wave1 -two"></div>
+        <div class="wave1 -three"></div>
+        <div class="wave3 -one"></div>
+        <div class="wave3 -two"></div>
+        <div class="wave3 -three"></div>
+      </div>
+
+      <!--선택이후-->
+      <div class="부적22">
+        <div class="대사"></div>
+        <div class="중앙원">
+          <img
+            class="illust"
+            id="십장생도"
+            src="십장생도 프사.png"
+            alt="십장생도"
+          />
+          <img
+            class="illust"
+            id="화조도"
+            src="화조도 프사.png"
+            alt="십장생도"
+          />
+          <img
+            class="illust"
+            id="호작도"
+            src="프사 호작도.png"
+            alt="십장생도"
+          />
+          <img
+            class="illust"
+            id="어변성룡도"
+            src="어변성룡도 프사.png"
+            alt="십장생도"
+          />
+          <img
+            class="illust"
+            id="책가도"
+            src="책가도 프사.png"
+            alt="십장생도"
+          />
+        </div>
+      </div>
+      <div>
+        <img
+          class="일러"
+          id="십장생도3d"
+          src="3d 십장생도.png"
+          alt="십장생도"
+        />
+      </div>
+      <div>
+        <img
+          class="일러"
+          id="어변성룡도3d"
+          src="3d 어변성룡도-2.png"
+          alt="어변성룡도"
+        />
+      </div>
+      <div>
+        <img class="일러" id="책가도3d" src="3d.png" alt="책가도" />
+      </div>
+      <div>
+        <img class="일러" id="호작도3d" src="3d 호작도.png" alt="호작도" />
+      </div>
+      <div>
+        <img class="일러" id="화조도3d" src="3d 화조도.png" alt="화조도" />
+      </div>
+      <div class="닫는창">-</div>
       <button
-        class="카톡"
+        id="카톡"
         type="button"
+        class="버튼"
         onclick="location.href='민드바이스 카톡창.html'"
       >
         ✉️
       </button>
       <button
-        class="홈"
+        id="홈"
         type="button"
+        class="버튼"
         onclick="location.href='민드바이스메인.html'"
       >
         🏠

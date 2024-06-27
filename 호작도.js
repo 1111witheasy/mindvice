@@ -46,6 +46,7 @@ function toggleBtn3() {
   }
 }
 
+//설정창 > 홈, 메세지 버튼
 function toggleBtn4() {
   // 토글 할 버튼 선택 (btn1)
   var btn4 = document.getElementsByClassName("버튼");
@@ -59,6 +60,20 @@ function toggleBtn4() {
     else {
       btn4[i].style.display = "block";
     }
+  }
+}
+
+function toggleBtn5() {
+  // 토글 할 버튼 선택 (btn1)
+  var button1 = document.getElementById("vj");
+
+  // btn1 숨기기 (display: none)
+  if (button1.style.display !== "none") {
+    button1.style.display = "none";
+  }
+  // btn` 보이기 (display: block)
+  else {
+    button1.style.display = "block";
   }
 }
 
@@ -91,4 +106,100 @@ function dragging(event) {
 
 function stopDragging(event) {
   isDragging = false;
+}
+
+function toggleBtnscroll1() {
+  var slide = document.getElementById("uu");
+  slide.style.top = "0px";
+}
+
+function toggleBtnscroll2() {
+  var slide = document.getElementById("uu");
+  slide.style.top = "-500px";
+}
+
+function toggleBtnscroll3() {
+  var slide = document.getElementById("uu");
+  slide.style.top = "-1000px";
+}
+
+function toggleBtnscroll4() {
+  var slide = document.getElementById("uu");
+  slide.style.top = "-1500px";
+}
+
+function toggleBtnscroll5() {
+  var slide = document.getElementById("uu");
+  slide.style.top = "-2000px";
+}
+
+/**
+function toggleBtn5() {
+  // 토글 할 버튼 선택 (btn1)
+  var button1 = document.getElementById("설정");
+
+  // btn1 숨기기 (display: none)
+  if (button1.style.display !== "none") {
+    button1.style.display = "none";
+  }
+  // btn` 보이기 (display: block)
+  else {
+    button1.style.display = "block";
+  }
+}
+*/
+
+function toggleBtnevent1() {
+  var vj = document.getElementsByClassName("부적22");
+  var one = document.getElementById("어변성룡도3d");
+  if (vj.style.display !== "none") {
+    vj.style.display = "block";
+    one.style.display = "block";
+  }
+}
+
+function toggleBtnevent2() {
+  var vj = document.getElementsByClassName("부적22");
+  var two = document.getElementById("화조도3d");
+
+  for (var i = 0; i < vj.length; i++) {
+    if (vj.style.display !== "none") {
+      vj[i].style.display = "block";
+      two.style.display = "block";
+    }
+  }
+}
+
+function toggleBtnevent3() {
+  var vj = document.getElementsByClassName("부적22");
+  var three = document.getElementById("호작도3d");
+
+  for (var i = 0; i < vj.length; i++) {
+    if (vj.style.display !== "none") {
+      vj[i].style.display = "block";
+      three.style.display = "block";
+    }
+  }
+}
+function toggleBtnevent4() {
+  var vj = document.getElementsByClassName("부적22");
+  var four = document.getElementById("십장생도3d");
+
+  for (var i = 0; i < vj.length; i++) {
+    if (vj.style.display !== "none") {
+      vj[i].style.display = "block";
+      four.style.display = "block";
+    }
+  }
+}
+function toggleBtnevent5() {
+  var vj = document.getElementsByClassName("부적22");
+  var five = document.getElementById("책가도3d");
+
+  for (var i = 0; i < vj.length; i++) {
+    if (vj.style.display !== "none") {
+      vj[i].style.display = "block";
+      five.style.display = "block";
+    }
+  }
 }
