@@ -3,40 +3,69 @@ html {
   margin: 0;
   padding: 0;
   background-color: #050016;
+  overflow: hidden;
+  cursor: url(images/마우스커서.svg) 0 0, url(images/자산 1png) 0 0, auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .상단바 {
-  width: 1000px;
+  width: 1536px;
 }
 
 .배경 {
-  width: 1200px;
+  width: 1517px;
+  height: 800px;
   position: relative;
   background-color: #050016;
   top: 0px;
-  left: 150px;
+  left: 0px;
+  z-index: 1;
+}
+
+.영상 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1517px;
+  height: 800px;
+}
+
+.우측바 {
+  width: 2%;
+  height: 800px;
+  position: absolute;
+  background-color: #f3f3ff;
+  border: 1px solid #33f;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
 }
 
 .로고 {
   width: 200px;
   position: absolute;
+  display: inline-block;
   left: 50%;
-  transform: translate(-50%, 0%);
+  top: 2%;
 }
 
 .설명 {
   background-color: #f3f3ff;
-  width: 300px;
-  height: 410px;
+  width: 19%;
+  height: 54.8%;
   border: 1px solid #33f;
-  border-radius: 20px;
+  border-radius: 0px 20px 20px 0px;
   position: absolute;
-  left: 0;
-  top: 120px;
+  left: 2%;
+  top: 15%;
+  padding: 2%;
+  display: inline-block;
   text-align: left;
-  padding: 15px;
   line-height: 1.5;
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;
@@ -46,10 +75,10 @@ html {
 .container {
   position: absolute;
   border-radius: 20px;
-  top: 120px;
-  left: 330px;
-  width: 900px;
-  height: 500px;
+  top: 15%;
+  left: 25%;
+  width: 80%;
+  height: 70%;
   overflow: hidden;
   background-color: #f3f3ff;
   border: 1px solid #3333ff;
@@ -83,7 +112,7 @@ html {
   margin: 2px 0;
   text-align: center;
   position: absolute;
-  top: 25px;
+  top: 50px;
   left: calc(50% - 200px);
 }
 .toplist {
@@ -96,8 +125,7 @@ html {
   font-weight: 600;
   color: #050016;
 }
-
-.toplist:hover {
+.top:hover {
   color: #3333ff;
 }
 
@@ -111,8 +139,8 @@ li {
   left: 0px;
 }
 .mainlist {
-  width: 900px;
-  height: 4500px;
+  width: 100%;
+  height: 500%;
   top: 0px;
   position: absolute;
 }
@@ -122,21 +150,37 @@ li {
 
 .list {
   position: relative;
-  width: 900px;
-  height: 500px;
+  width: 1061.9px;
+  height: 560px;
   display: flex;
+}
+
+#list1 {
+  display: block;
+}
+#list2 {
+  display: block;
+}
+#list3 {
+  display: block;
+}
+#list4 {
+  display: block;
+}
+#list5 {
+  display: block;
 }
 
 .illustps {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   background-color: #050016;
   border-radius: 50%;
   scroll-snap-align: center;
   overflow: hidden;
-  top: 110px;
-  left: calc(50% - 150px);
+  top: 120px;
+  left: calc(50% - 125px);
   filter: drop-shadow(<0> <0> [15px] [#e1e1eb]);
   animation-name: upsidedown;
   animation-duration: 3s;
@@ -148,11 +192,206 @@ li {
 /* 키프레임 이름 = 애니메이션 이름 */
 @-webkit-keyframes upsidedown {
   0% {
-    top: 90px;
+    top: 125px;
   }
   100% {
-    top: 110px;
+    top: 145px;
   }
+}
+
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+.arrow_box1 {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 8px;
+  top: 60px;
+  left: calc(50% - 25px);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #f3f3ff;
+  color: #050016;
+  border: #3333ff 1px solid;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.arrow_box1:after {
+  position: absolute;
+  top: 100%;
+  right: 43%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  border: solid transparent;
+  border-top-color: #3333ff;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+#십장생도프사:hover + p.arrow_box1 {
+  display: block;
+}
+
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+.arrow_box2 {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 8px;
+  top: 60px;
+  left: calc(50% - 25px);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #f3f3ff;
+  color: #050016;
+  border: #3333ff 1px solid;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.arrow_box2:after {
+  position: absolute;
+  top: 100%;
+  right: 43%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  border: solid transparent;
+  border-top-color: #3333ff;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+#어변성룡도프사:hover + p.arrow_box2 {
+  display: block;
+}
+
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+.arrow_box3 {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 8px;
+  top: 60px;
+  left: calc(50% - 25px);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #f3f3ff;
+  color: #050016;
+  border: #3333ff 1px solid;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.arrow_box3:after {
+  position: absolute;
+  top: 100%;
+  right: 43%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  border: solid transparent;
+  border-top-color: #3333ff;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+#책가도프사:hover + p.arrow_box3 {
+  display: block;
+}
+
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+.arrow_box4 {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 8px;
+  top: 60px;
+  left: calc(50% - 25px);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #f3f3ff;
+  color: #050016;
+  border: #3333ff 1px solid;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.arrow_box4:after {
+  position: absolute;
+  top: 100%;
+  right: 43%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  border: solid transparent;
+  border-top-color: #3333ff;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+#호작도프사:hover + p.arrow_box4 {
+  display: block;
+}
+
+/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
+.arrow_box5 {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 8px;
+  top: 60px;
+  left: calc(50% - 25px);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #f3f3ff;
+  color: #050016;
+  border: #3333ff 1px solid;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.arrow_box5:after {
+  position: absolute;
+  top: 100%;
+  right: 43%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  border: solid transparent;
+  border-top-color: #3333ff;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+#화조도프사:hover + p.arrow_box5 {
+  display: block;
 }
 
 .illust-cover {
@@ -165,8 +404,13 @@ li {
   display: flex;
   align-items: center;
   top: 25px;
-  left: 800px;
+  left: 1016.1px;
 }
+
+.illust-cover:hover {
+  background-color: #3333ff;
+}
+
 .illust {
   width: 150%;
   animation-name: skew;
@@ -205,7 +449,7 @@ li {
 
 .title {
   position: absolute;
-  top: 380px;
+  top: 445px;
   font-size: 30px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
@@ -214,7 +458,7 @@ li {
 
 .point1 {
   position: absolute;
-  top: 350px;
+  top: 400px;
   line-height: 1.5;
   font-size: 20px;
   letter-spacing: -0.1em;
@@ -228,9 +472,9 @@ li {
   width: 200px;
   height: 100px;
   overflow: hidden;
-  top: 380px;
+  top: 445px;
   font-size: 12px;
-  left: 650px;
+  left: 850px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   hyphens: auto;
@@ -240,7 +484,7 @@ li {
   display: flex;
   position: absolute;
   justify-content: center;
-  top: 400px;
+  top: 500px;
 }
 
 .btn-container button {
@@ -308,16 +552,16 @@ li {
 
 .버튼 {
   background-color: #f3f3ff;
-  width: 330px;
-  height: 60px;
+  width: 23%;
+  height: 3%;
   border: 1px solid #33f;
-  border-radius: 20px;
+  border-radius: 0px 20px 20px 0px;
   position: absolute;
-  left: 0px;
-  top: 560px;
+  left: 2%;
+  top: 77.5%;
   color: #3333ff;
   text-align: right;
-  padding: 15px;
+  padding: 1.9%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,6 +570,12 @@ li {
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;
   z-index: 6;
+}
+
+.버튼:hover {
+  background-color: #33f;
+  color: #f3f3ff;
+  font-weight: 600;
 }
 
 #메세지수 {
@@ -365,15 +615,16 @@ li {
 
 #vj {
   background-color: #f3f3ff;
-  width: 50px;
-  height: 50px;
+  width: 5%;
+  height: 7.5%;
   border: 1px solid #33f;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 0 45px 45px 0px;
   position: absolute;
-  font-size: 1.2rem;
-  top: 520px;
-  left: 15px;
-  z-index: 2;
+  top: 77.5%;
+  left: 2%;
+  z-index: 8;
+  text-align: center;
+  font-size: 20px;
   display: none;
   animation-name: button2;
   animation-duration: 0.7s;
@@ -383,15 +634,32 @@ li {
 
 @-webkit-keyframes button2 {
   0% {
-    top: 570px;
+    top: 77.5%;
+    left: -1%;
     opacity: 0%;
   }
   100% {
-    top: 520px;
+    top: 77.5%;
+    left: 2%;
     opacity: 100%;
   }
 }
 
 #vj:hover {
   background-color: #33f;
+}
+
+@media screen and (min-width: 576px) {
+  /* 스마트폰 가로 */
+}
+
+@media screen and (min-width: 768px) {
+  /* 타블렛 */
+}
+@media screen and (min-width: 992px) {
+  /* 데스크탑 */
+}
+
+@media screen and (min-width: 1200px) {
+  /* 큰 데스크탑 */
 }

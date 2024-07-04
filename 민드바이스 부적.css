@@ -1,15 +1,25 @@
+body,
 html {
+  margin: 0;
+  padding: 0;
   background-color: #050016;
+  height: 750px;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .배경 {
-  width: 1200px;
+  width: 1517px;
+  height: 800px;
   position: relative;
   background-color: #050016;
-  top: 20px;
-  left: 150px;
+  top: 0px;
+  left: 0px;
 }
 
 .상단바 {
@@ -19,6 +29,7 @@ html {
   border: 1px solid #33f;
   border-radius: 20px;
   position: absolute;
+  display: none;
   top: 0px;
   left: 0px;
 }
@@ -34,21 +45,63 @@ html {
   left: 1160px;
 }
 
+.우측바 {
+  width: 2%;
+  height: 800px;
+  position: absolute;
+  background-color: #050016;
+  border: 1px solid #33f;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+}
+
+.설정 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: #f3f3ff;
+  border: 1px solid #33f;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  z-index: 15;
+}
+
+.설정:hover {
+  background-color: #33f;
+}
+
 .왼쪽바 {
-  width: 300px;
-  height: 560px;
+  width: 20%;
+  height: 80%;
   position: absolute;
   overflow: hidden;
   background: linear-gradient(-45deg, #050016, #33f);
   background-size: 400% 400%;
-  border-radius: 20px;
+  border-radius: 0 20px 20px 0;
   top: 40px;
-  left: 0px;
+  left: 2%;
   animation: colorChange 6s ease infinite;
 }
 
 img {
   width: 100px;
+}
+
+.영상1 {
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+}
+
+.영상2 {
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  transform: scaleX(-1);
 }
 
 .wave {
@@ -186,8 +239,8 @@ img {
 }
 
 .오른쪽바 {
-  width: 300px;
-  height: 560px;
+  width: 25%;
+  height: 80%;
   position: absolute;
   overflow: hidden;
   background: linear-gradient(-45deg, #050016, #33f);
@@ -195,7 +248,7 @@ img {
   border: 1px solid #33f;
   border-radius: 20px;
   top: 40px;
-  left: 900px;
+  left: 77%;
   animation: colorChange 6s ease infinite;
 }
 
@@ -212,14 +265,14 @@ img {
 }
 
 .중앙 {
-  width: 600px;
-  height: 560px;
+  width: 55%;
+  height: 80%;
   position: absolute;
   background-color: #050016;
   border: 1px solid #33f;
   border-radius: 20px;
   top: 40px;
-  left: 300px;
+  left: 22%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,6 +282,11 @@ img {
   color: #f3f3ff;
   position: absolute;
   top: 50px;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-size: 18px;
+  text-align: center;
 }
 
 ul {
@@ -252,13 +310,13 @@ li {
 .부적22 {
   z-index: 10;
   position: absolute;
-  width: 700px;
+  width: 800px;
   height: 400px;
   background-color: #f3f3ff;
   border: #33f 1px solid;
   border-radius: 20px;
   top: 100px;
-  left: 250px;
+  left: calc(50% - 400px);
   overflow: hidden;
   display: none;
 }
@@ -270,7 +328,7 @@ li {
   border-radius: 50%;
   position: absolute;
   top: 250px;
-  left: 200px;
+  left: calc(50% - 150px);
 }
 
 .illust {
@@ -314,8 +372,11 @@ li {
     -webkit-transform: rotate (0);
     opacity: 100%;
   }
+  50% {
+    opacity: 100%;
+  }
   100% {
-    -webkit-transform: rotate(720deg);
+    -webkit-transform: rotate(1080deg);
     opacity: 0%;
   }
 }
@@ -325,8 +386,11 @@ li {
     -webkit-transform: rotate (72deg);
     opacity: 100%;
   }
+  50% {
+    opacity: 100%;
+  }
   100% {
-    -webkit-transform: rotate(792deg);
+    -webkit-transform: rotate(1152deg);
     opacity: 0%;
   }
 }
@@ -336,8 +400,11 @@ li {
     -webkit-transform: rotate (144deg);
     opacity: 100%;
   }
+  50% {
+    opacity: 100%;
+  }
   100% {
-    -webkit-transform: rotate(864deg);
+    -webkit-transform: rotate(1224deg);
     opacity: 0%;
   }
 }
@@ -347,9 +414,11 @@ li {
     -webkit-transform: rotate (216deg);
     opacity: 100%;
   }
-
+  50% {
+    opacity: 100%;
+  }
   100% {
-    -webkit-transform: rotate(936deg);
+    -webkit-transform: rotate(1296deg);
     opacity: 0%;
   }
 }
@@ -359,9 +428,11 @@ li {
     -webkit-transform: rotate (288deg);
     opacity: 100%;
   }
-
+  50% {
+    opacity: 100%;
+  }
   100% {
-    -webkit-transform: rotate(1008deg);
+    -webkit-transform: rotate(1368deg);
     opacity: 0%;
   }
 }
@@ -371,31 +442,31 @@ li {
   width: 250px;
   position: absolute;
   top: 120px;
-  left: 500px;
+  left: calc(50% - 125px);
 }
 
 #화조도3d {
-  animation: 등장 5s ease-in-out;
+  animation: 등장 4.5s ease-in-out;
   display: none;
 }
 
 #십장생도3d {
-  animation: 등장 5s ease-in-out;
+  animation: 등장 4.5s ease-in-out;
   display: none;
 }
 
 #호작도3d {
-  animation: 등장 5s ease-in-out;
+  animation: 등장 4.5s ease-in-out;
   display: none;
 }
 
 #책가도3d {
-  animation: 등장 5s ease-in-out;
+  animation: 등장 4.5s ease-in-out;
   display: none;
 }
 
 #어변성룡도3d {
-  animation: 등장 5s ease-in-out;
+  animation: 등장 4.5s ease-in-out;
   display: none;
 }
 
@@ -404,7 +475,7 @@ li {
     opacity: 0%;
   }
 
-  70% {
+  50% {
     opacity: 0%;
     top: 130px;
   }
@@ -419,21 +490,65 @@ li {
   }
 }
 
+.부적메세지 {
+  display: none;
+  z-index: 100;
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  background-color: #f3f3ff;
+  border: #33f 1px solid;
+  border-radius: 20px;
+  top: 440px;
+  left: calc(50% - 125px);
+  justify-content: center;
+  align-items: center;
+  color: #050016;
+  border: #3333ff 1px solid;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+  font-size: 14px;
+  text-align: center;
+  animation: appearance 5s ease-in-out;
+}
+
+@-webkit-keyframes appearance {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 0%;
+    top: 420px;
+  }
+  90% {
+    opacity: 0%;
+    top: 460px;
+  }
+
+  100% {
+    top: 450px;
+    opacity: 100%;
+  }
+}
+
 .버튼 {
   display: none;
 }
 
 #홈 {
   background-color: #f3f3ff;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border: 1px solid #33f;
-  border-radius: 25px;
-  font-size: 1.2rem;
+  border-radius: 15px;
+  font-size: 15px;
   position: absolute;
-  top: 0px;
-  left: 1080px;
+  top: 30px;
+  left: 2px;
   z-index: 10;
+  padding: 0 0.2px 0.2px 0;
 
   animation-name: button1;
   animation-duration: 0.7s;
@@ -444,52 +559,15 @@ li {
 /* 키프레임 이름 = 애니메이션 이름 */
 @-webkit-keyframes button1 {
   0% {
-    left: 1160px;
+    top: 0;
     opacity: 0%;
   }
   100% {
-    left: 1080px;
+    top: 30px;
     opacity: 100%;
   }
 }
 
 #홈:hover {
-  background-color: #33f;
-}
-
-#카톡 {
-  background-color: #f3f3ff;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #33f;
-  border-radius: 25px;
-  font-size: 1.2rem;
-  position: absolute;
-  top: 0px;
-  left: 1120px;
-  z-index: 10;
-  animation-name: button2;
-  animation-duration: 0.7s;
-  animation-duration: ease-in;
-  animation-direction: forward;
-}
-
-/* 키프레임 이름 = 애니메이션 이름 */
-@-webkit-keyframes button2 {
-  0% {
-    left: 1160px;
-    opacity: 0%;
-  }
-  30% {
-    left: 1160px;
-    opacity: 0%;
-  }
-  100% {
-    left: 1120px;
-    opacity: 100%;
-  }
-}
-
-#카톡:hover {
   background-color: #33f;
 }

@@ -10,9 +10,18 @@
   <body>
     <main class="배경">
       <div class="상단바"></div>
+      <div class="우측바"></div>
       <div class="설정" onclick="toggleBtn4()"></div>
       <!--선택지-->
       <div class="왼쪽바">
+        <video
+          class="영상1"
+          src="배경.mp4"
+          muted
+          autoplay
+          playsinline
+          loop
+        ></video>
         <div class="wave -one"></div>
         <div class="wave -two"></div>
         <div class="wave -three"></div>
@@ -31,6 +40,14 @@
         </ul>
       </div>
       <div class="오른쪽바">
+        <video
+          class="영상2"
+          src="배경.mp4"
+          muted
+          autoplay
+          playsinline
+          loop
+        ></video>
         <div class="wave1 -one"></div>
         <div class="wave1 -two"></div>
         <div class="wave1 -three"></div>
@@ -82,6 +99,7 @@
           src="3d 십장생도.png"
           alt="십장생도"
         />
+        <div class="부적메세지" id="십장생도부적메세지">부적내용을 적어용</div>
       </div>
       <div>
         <img
@@ -90,15 +108,22 @@
           src="3d 어변성룡도-2.png"
           alt="어변성룡도"
         />
+        <div class="부적메세지" id="어변성룡도부적메세지">
+          부적내용을 적어용
+        </div>
       </div>
+
       <div>
         <img class="일러" id="책가도3d" src="3d.png" alt="책가도" />
+        <div class="부적메세지" id="책가도부적메세지">부적내용을 적어용</div>
       </div>
       <div>
         <img class="일러" id="호작도3d" src="3d 호작도.png" alt="호작도" />
+        <div class="부적메세지" id="호작도부적메세지">부적내용을 적어용</div>
       </div>
       <div>
         <img class="일러" id="화조도3d" src="3d 화조도.png" alt="화조도" />
+        <div class="부적메세지" id="화조도부적메세지">부적내용을 적어용</div>
       </div>
       <div class="닫는창">-</div>
       <button

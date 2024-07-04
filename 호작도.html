@@ -10,7 +10,17 @@
 
   <body>
     <main class="배경">
+      <video
+        class="배경영상"
+        onclick="location.href='민드바이스메인.html'"
+        src="배경.mp4"
+        muted
+        autoplay
+        playsinline
+        loop
+      ></video>
       <div class="상단바"></div>
+      <div class="우측바"></div>
       <div class="설정" onclick="toggleBtn4()"></div>
       <!--메인들-->
       <div class="채팅창">
@@ -23,13 +33,26 @@
       <div class="로고창">
         <div class="꾸밈1"></div>
         <div class="꾸밈2"></div>
-        <div class="로고바탕"></div>
+        <div class="로고바탕">
+          <img
+            id="메인어변성룡도프사"
+            src="프사 호작도.png"
+            alt="호작도 프사"
+          />
+        </div>
       </div>
       <div class="클릭이전화면">
         <img id="메인호작도" src="3d 호작도.png" alt="호작도" />
       </div>
       <div class="오른쪽사진">
-        <img id="어변성룡도" src="3d 어변성룡도-2.png" alt="어변성룡도" />
+        <video
+          class="영상"
+          src="오른쪽 영상.mp4"
+          muted
+          autoplay
+          playsinline
+          loop
+        ></video>
       </div>
 
       <!--이건 버튼-->
@@ -62,14 +85,6 @@
         <li id="말풍선3">우루룩롹끼</li>
         <div id="카톡쓰는창" contenteditable="true"></div>
       </div>
-      <button
-        class="버튼"
-        id="카톡"
-        type="button"
-        onclick="location.href='민드바이스 카톡창.html'"
-      >
-        ✉️
-      </button>
       <button
         class="버튼"
         id="홈"

@@ -49,17 +49,15 @@ function toggleBtn3() {
 //설정창 > 홈, 메세지 버튼
 function toggleBtn4() {
   // 토글 할 버튼 선택 (btn1)
-  var btn4 = document.getElementsByClassName("버튼");
+  var btn4 = document.getElementById("홈");
 
   // btn1 숨기기 (display: none)
-  for (var i = 0; i < btn4.length; i++) {
-    if (btn4[i].style.display !== "none") {
-      btn4[i].style.display = "none";
-    }
-    // btn` 보이기 (display: block)
-    else {
-      btn4[i].style.display = "block";
-    }
+  if (btn4.style.display !== "none") {
+    btn4.style.display = "none";
+  }
+  // btn` 보이기 (display: block)
+  else {
+    btn4.style.display = "block";
   }
 }
 
@@ -115,22 +113,22 @@ function toggleBtnscroll1() {
 
 function toggleBtnscroll2() {
   var slide = document.getElementById("uu");
-  slide.style.top = "-500px";
+  slide.style.top = "-560px";
 }
 
 function toggleBtnscroll3() {
   var slide = document.getElementById("uu");
-  slide.style.top = "-1000px";
+  slide.style.top = "-1120px";
 }
 
 function toggleBtnscroll4() {
   var slide = document.getElementById("uu");
-  slide.style.top = "-1500px";
+  slide.style.top = "-1680px";
 }
 
 function toggleBtnscroll5() {
   var slide = document.getElementById("uu");
-  slide.style.top = "-2000px";
+  slide.style.top = "-2240px";
 }
 
 /**
@@ -152,20 +150,25 @@ function toggleBtn5() {
 function toggleBtnevent1() {
   var vj = document.getElementsByClassName("부적22");
   var one = document.getElementById("어변성룡도3d");
-  if (vj.style.display !== "none") {
-    vj.style.display = "block";
-    one.style.display = "block";
+  var onevj = document.getElementById("어변성룡도부적메세지");
+  for (var i = 0; i < vj.length; i++) {
+    if (vj[i].style.display !== "none") {
+      vj[i].style.display = "block";
+      one.style.display = "block";
+      onevj.style.display = "block";
+    }
   }
 }
 
 function toggleBtnevent2() {
   var vj = document.getElementsByClassName("부적22");
   var two = document.getElementById("화조도3d");
-
+  var twovj = document.getElementById("화조도부적메세지");
   for (var i = 0; i < vj.length; i++) {
-    if (vj.style.display !== "none") {
+    if (vj[i].style.display !== "none") {
       vj[i].style.display = "block";
       two.style.display = "block";
+      twovj.style.display = "block";
     }
   }
 }
@@ -173,33 +176,36 @@ function toggleBtnevent2() {
 function toggleBtnevent3() {
   var vj = document.getElementsByClassName("부적22");
   var three = document.getElementById("호작도3d");
-
+  var threevj = document.getElementById("호작도부적메세지");
   for (var i = 0; i < vj.length; i++) {
-    if (vj.style.display !== "none") {
+    if (vj[i].style.display !== "none") {
       vj[i].style.display = "block";
       three.style.display = "block";
+      threevj.style.display = "block";
     }
   }
 }
 function toggleBtnevent4() {
   var vj = document.getElementsByClassName("부적22");
   var four = document.getElementById("십장생도3d");
-
+  var fourvj = document.getElementById("십장생도부적메세지");
   for (var i = 0; i < vj.length; i++) {
-    if (vj.style.display !== "none") {
+    if (vj[i].style.display !== "none") {
       vj[i].style.display = "block";
       four.style.display = "block";
+      fourvj.style.display = "block";
     }
   }
 }
 function toggleBtnevent5() {
   var vj = document.getElementsByClassName("부적22");
   var five = document.getElementById("책가도3d");
-
+  var fivevj = document.getElementById("책가도부적메세지");
   for (var i = 0; i < vj.length; i++) {
-    if (vj.style.display !== "none") {
+    if (vj[i].style.display !== "none") {
       vj[i].style.display = "block";
       five.style.display = "block";
+      fivevj.style.display = "block";
     }
   }
 }
