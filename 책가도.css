@@ -267,7 +267,7 @@ button {
   background-color: transparent;
   border: 2px solid #33f;
   position: absolute;
-  top: 300px;
+  top: 302px;
   left: calc(50% - 40px);
   color: #33f;
   letter-spacing: -0.05em;
@@ -461,8 +461,8 @@ button {
   background-color: #050016;
   border: 1px solid #33f;
   border-radius: 20px;
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: 420px;
   position: absolute;
   top: 120px;
   left: 950px;
@@ -491,11 +491,11 @@ button {
   background-color: #050016;
   border: 1px solid #33f;
   border-radius: 0 0 20px 20px;
-  width: 370px;
+  width: 320px;
   height: 70px;
   padding: 15px;
   position: absolute;
-  top: 460px;
+  top: 370px;
   left: 0px;
   outline: none;
   color: #f3f3ff;
@@ -519,7 +519,7 @@ li {
   top: 20px;
   left: 20px;
   width: 230px;
-  height: 40px;
+  height: 70px;
   line-height: 1.5em;
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;
@@ -541,10 +541,10 @@ li {
   position: absolute;
   padding: 10px;
   border-radius: 20px;
-  top: 100px;
+  top: 125px;
   left: 20px;
   width: 230px;
-  height: 40px;
+  height: 70px;
   line-height: 1.5em;
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;
@@ -566,10 +566,10 @@ li {
   position: absolute;
   padding: 10px;
   border-radius: 20px;
-  top: 180px;
+  top: 230px;
   left: 20px;
   width: 230px;
-  height: 40px;
+  height: 70px;
   line-height: 1.5em;
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;

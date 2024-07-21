@@ -154,7 +154,7 @@ html {
 }
 
 #메인어변성룡도프사 {
-  width: 100%;
+  width: 102%;
   position: absolute;
 
   top: 3px;
@@ -198,7 +198,7 @@ html {
 }
 
 .로고바탕 {
-  background-color: #f3f3ff;
+  background-color: #050016;
   border: 1px solid #33f;
   border-radius: 100px;
   position: absolute;
@@ -279,7 +279,7 @@ button {
   background-color: transparent;
   border: 2px solid #33f;
   position: absolute;
-  top: 300px;
+  top: 302px;
   left: calc(50% - 40px);
   color: #33f;
   letter-spacing: -0.05em;
@@ -473,10 +473,10 @@ button {
   background-color: #050016;
   border: 1px solid #33f;
   border-radius: 20px;
-  width: 400px;
+  width: 350px;
   height: 500px;
   position: absolute;
-  top: 120px;
+  top: 90px;
   left: 950px;
   display: none;
   z-index: 20;
@@ -503,7 +503,7 @@ button {
   background-color: #050016;
   border: 1px solid #33f;
   border-radius: 0 0 20px 20px;
-  width: 370px;
+  width: 320px;
   height: 70px;
   padding: 15px;
   position: absolute;
@@ -531,7 +531,7 @@ li {
   top: 20px;
   left: 20px;
   width: 230px;
-  height: 40px;
+  height: 50px;
   line-height: 1.5em;
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;
@@ -553,10 +553,10 @@ li {
   position: absolute;
   padding: 10px;
   border-radius: 20px;
-  top: 100px;
+  top: 105px;
   left: 20px;
   width: 230px;
-  height: 40px;
+  height: 70px;
   line-height: 1.5em;
   letter-spacing: -0.1em;
   font-family: "Roboto", sans-serif;
@@ -578,7 +578,57 @@ li {
   position: absolute;
   padding: 10px;
   border-radius: 20px;
-  top: 180px;
+  top: 210px;
+  left: 20px;
+  width: 230px;
+  height: 50px;
+  line-height: 1.5em;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  color: #f3f3ff;
+}
+
+#말풍선::after {
+  border-right: 12px solid #33f;
+  border-top: 0px solid transparent;
+  border-bottom: 15px solid transparent;
+  left: -10px;
+  top: 20px;
+  content: "";
+  position: absolute;
+}
+
+#말풍선4 {
+  background-color: #33f;
+  position: absolute;
+  padding: 10px;
+  border-radius: 20px;
+  top: 295px;
+  left: 20px;
+  width: 230px;
+  height: 50px;
+  line-height: 1.5em;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  color: #f3f3ff;
+}
+
+#말풍선::after {
+  border-right: 12px solid #33f;
+  border-top: 0px solid transparent;
+  border-bottom: 15px solid transparent;
+  left: -10px;
+  top: 20px;
+  content: "";
+  position: absolute;
+}
+
+#말풍선5 {
+  background-color: #33f;
+  position: absolute;
+  padding: 10px;
+  border-radius: 20px;
+  top: 380px;
   left: 20px;
   width: 230px;
   height: 40px;

@@ -181,12 +181,17 @@ li {
   overflow: hidden;
   top: 120px;
   left: calc(50% - 125px);
-  filter: drop-shadow(<0> <0> [15px] [#e1e1eb]);
+  filter: drop-shadow(<0> <0> [15px] [#868194]);
   animation-name: upsidedown;
   animation-duration: 3s;
   animation-duration: ease-in;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.illustps2 {
+  width: 320px;
+  height: 320px;
 }
 
 /* 키프레임 이름 = 애니메이션 이름 */
@@ -470,12 +475,14 @@ li {
 .paragraph {
   position: absolute;
   width: 200px;
-  height: 100px;
+  height: 150px;
   overflow: hidden;
   top: 445px;
   font-size: 12px;
   left: 850px;
   line-height: 1.5;
+  letter-spacing: -0.1em;
+  font-weight: 600;
   font-family: "Roboto", sans-serif;
   hyphens: auto;
 }

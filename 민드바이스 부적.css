@@ -287,6 +287,22 @@ img {
   hyphens: auto;
   font-size: 18px;
   text-align: center;
+  animation-name: qanimation;
+  animation-duration: 2s;
+  animation-duration: ease-out;
+  animation-direction: forward;
+}
+
+/* 키프레임 이름 = 애니메이션 이름 */
+@-webkit-keyframes qanimation {
+  0% {
+    top: 80px;
+    opacity: 0%;
+  }
+  100% {
+    top: 50px;
+    opacity: 100%;
+  }
 }
 
 ul {
@@ -295,16 +311,42 @@ ul {
   position: absolute;
   margin: 40px;
   padding: 0;
-  font-family: sans-serif;
 }
 
 li {
   list-style: none; /* Disable the normal item numbering */
   position: relative; /* Create a positioning context */
   margin: 16px; /* Give each list item a left margin to make room for the numbers */
-  padding: 6px 18px; /* Add some spacing around the content */
+  padding: 8px 24px; /* Add some spacing around the content */
   background: #f3f3ff;
   border-radius: 20px;
+  justify-content: center;
+  letter-spacing: -0.1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  animation-name: lianimation;
+  animation-duration: 3s;
+  animation-duration: ease-out;
+  animation-direction: forward;
+}
+
+/* 키프레임 이름 = 애니메이션 이름 */
+@-webkit-keyframes lianimation {
+  0% {
+    top: 90px;
+    opacity: 0%;
+  }
+  50% {
+    top: 30px;
+    opacity: 0%;
+  }
+  100% {
+    top: 0px;
+    opacity: 100%;
+  }
 }
 
 .부적22 {
@@ -479,7 +521,7 @@ li {
     opacity: 0%;
     top: 130px;
   }
-  90% {
+  75% {
     opacity: 0%;
     top: 115px;
   }
@@ -497,12 +539,11 @@ li {
   height: 50px;
   position: absolute;
   background-color: #f3f3ff;
+  padding: 5px;
   border: #33f 1px solid;
   border-radius: 20px;
   top: 440px;
   left: calc(50% - 125px);
-  justify-content: center;
-  align-items: center;
   color: #050016;
   border: #3333ff 1px solid;
   letter-spacing: -0.1em;
@@ -510,6 +551,8 @@ li {
   hyphens: auto;
   font-size: 14px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   animation: appearance 5s ease-in-out;
 }
 
